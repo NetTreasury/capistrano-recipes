@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "capistrano-recipes"
   s.version     = CapistranoRecipes::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Phil Misiowiec", "Leonardo Bighetti"]
-  s.email       = ["github@webficient.com"]
+  s.authors     = ["Jean le Roux"]
+  s.email       = ["info@shuntyard.co.za"]
   s.homepage    = ""
   s.summary     = %q{Capistrano recipes}
   s.description = %q{Extend the Capistrano gem with these useful recipes}
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc"
   ]
-  
-  s.add_dependency "capistrano", ">= 2.5.9"
-  s.add_dependency "capistrano-ext", ">= 1.2.1"
+
+  s.add_dependency "capistrano", ">= 2.14"
 end
