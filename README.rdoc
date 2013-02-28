@@ -62,14 +62,10 @@ Ensure you have the Capistrano gem installed:
 
   sudo gem install capistrano
 
-Optionally install the Capistrano extensions gem to give you multistage support:
-  
-  sudo gem install capistrano-ext
-
 Install this gem:
 
-  sudo gem install capistrano-recipes --source=http://gemcutter.com
-  
+  sudo gem install capistrano-recipes --source=https://github.com/Shuntyard/capistrano-recipes.git
+
 To setup the initial Capistrano deploy file, go to your Rails app folder via command line and enter:
 
   capify .
@@ -79,44 +75,16 @@ To setup the initial Capistrano deploy file, go to your Rails app folder via com
 Inside the newly created config/deploy.rb, add:
 
   require 'capistrano/ext/multistage' # only require if you've installed Cap ext gem
-  
+
   # This one should go at the end of your deploy.rb
   require 'capistrano_recipes'
 
-===RVM
-
-RVM is enabled by default. You can disable it by setting :using_rvm to false, or leverage it
-by setting your rvm_ruby_string to appropriate ones (default is ree)
-
-If using_rvm is true, the rvm recipe will load rvm's own capistrano extensions so you don't
-have to worry about it during deploy. Just make sure you have everything set up right, like
-.rvmrc on project root and system-wide install on the servers.
-
-See (http://rvm.beginrescueend.com/rvm/install) for more info.
-
-===Nginx
-
-If you're using nginx as your web server, set :web_server to :nginx and deploy:setup will
-generate the appropriate configuration file for it based on your other variables, such as
-:application_uses_ssl, etc.
-
-===Passenger
-
-If you're running Phusion Passenger (http://www.modrails.com) be sure you add this line to config/deploy.rb:
-
-  set :server, :passenger
-
-===Unicorn
-  
-If you're running Unicorn (http://unicorn.bogomips.org/) be sure to add this line instead:
-  
-  set :server, :unicorn
 
 ==Contributors (thank you!)
 
 * Rogério Augusto
 * Leonardob Bighetti
-  
+
 ==Copyright
 
-Copyright (c) 2009-2011 Webficient LLC, Phil Misiowiec. See LICENSE for details.
+Copyright (c) 2013 Shuntyard Technologies. See LICENSE for details.
