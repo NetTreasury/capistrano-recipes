@@ -12,7 +12,7 @@ Capistrano::Configuration.instance.load do
 
     desc "Install Ruby 2.0, and the Bundler gem"
     task :install, roles: :app do
-      run "#{sudo} add-apt-repository -y ppa:brightbox/ruby-ng"
+      run "#{sudo} add-apt-repository -y ppa:brightbox/ruby-ng-experimental"
       run "#{sudo} apt-get -y update"
       run "#{sudo} apt-get -y install ruby2.0"
 
