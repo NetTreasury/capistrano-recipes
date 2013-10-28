@@ -4,7 +4,7 @@ Capistrano::Configuration.instance.load do
     task :install_193, roles: :app do
       run "#{sudo} add-apt-repository -y ppa:brightbox/ruby-ng"
       run "#{sudo} apt-get -y update"
-      run "#{sudo} apt-get -y install ruby1.9.3"
+      run "#{sudo} apt-get -y install ruby1.9.3 ruby1.9.3-dev" 
 
       run "#{sudo} gem install bundler --no-ri --no-rdoc"
     end
@@ -14,7 +14,7 @@ Capistrano::Configuration.instance.load do
     task :install, roles: :app do
       run "#{sudo} add-apt-repository -y ppa:brightbox/ruby-ng-experimental"
       run "#{sudo} apt-get -y update"
-      run "#{sudo} apt-get -y install ruby2.0"
+      run "#{sudo} apt-get -y install ruby2.0 ruby2.0-dev"
 
       run "#{sudo} gem install bundler --no-ri --no-rdoc"
     end
