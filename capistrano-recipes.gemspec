@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Jean le Roux"]
   s.email       = ["info@shuntyard.co.za"]
   s.homepage    = ""
-  s.summary     = %q{Capistrano recipes}
+  s.summary     = %q{Capistrano utility recipes}
   s.description = %q{Extend the Capistrano gem with these useful recipes}
 
   s.required_rubygems_version = ">= 1.3.6"
@@ -24,5 +24,5 @@ Gem::Specification.new do |s|
      "README.rdoc"
   ]
 
-  s.add_dependency "capistrano", ">= 2.14"
+  s.add_dependency "capistrano", ">= 3.1"
 end
